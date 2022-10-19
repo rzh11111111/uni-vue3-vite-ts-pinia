@@ -1,14 +1,25 @@
 @mixin trim($numLines: null) {
+  //多行文本溢出
   @if $numLines != null {
-    display: flex;
-    overflow-y: hidden;
-    -webkit-line-clamp: $numLines;
-    -webkit-box-orient: vertical;
-  } @else {
-    display: block;
+    // display: flex;
+    // overflow-y: hidden;
+    // -webkit-line-clamp: $numLines;
+    // -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    display: box;
+    -webkit-line-clamp: $numLines; //多行在这里修改数字即可
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  } @else {
+    // display: block;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    display: box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
 }
 .line1 {

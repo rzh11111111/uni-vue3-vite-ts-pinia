@@ -35,3 +35,37 @@ export function restoreUrl(path: string, query: Object) {
   }
   return path
 }
+export  function throttle (fn:any, limit=1500) {
+  let inThrottle:Boolean; // 开关
+  return function() {
+    const args = arguments
+    const context = this
+    if (!inThrottle) {
+      fn.apply(context, args)
+      inThrottle = true
+      setTimeout(() => {
+        // 定时器用来进行保证在一定时间内开关的状态
+        inThrottle = false
+      }, limit)
+    }
+  };
+};
+
+
+// 防抖
+export function _debounce(fn, delay) {
+ 
+    var delay = delay || 200;
+    var timer;
+    return function () {
+        var th = this;
+        var args = arguments;
+        if (timer) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            timer = null;
+            fn.apply(th, args);
+        }, delay);
+    };
+}

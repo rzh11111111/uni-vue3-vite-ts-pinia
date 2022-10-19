@@ -9,9 +9,11 @@ export default defineStore({
   },
   actions: {
     getSystemInfo(): UniApp.GetSystemInfoResult {
-      if (Object.keys(this.systemInfo).length) return this.systemInfo
+      // if (Object.keys(this.systemInfo).length) return this.systemInfo
       const systemInfo = uni.getSystemInfoSync()
-      Object.assign(this.systemInfo, systemInfo)
+      console.log(systemInfo, 'getSystemInfo')
+      // Object.assign(this.systemInfo, systemInfo)
+      this.systemInfo = systemInfo
       return systemInfo
     },
   },

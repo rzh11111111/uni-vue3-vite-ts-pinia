@@ -11,4 +11,4 @@ git-cz
 *.svg
 *.html
 *.d.ts
-src/unimodules
+src
