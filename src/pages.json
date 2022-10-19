@@ -4,6 +4,7 @@
       "name": "index",
       "path": "pages/index/index",
       "style": {
+        "navigationStyle": "custom",
         "navigationBarTitleText": "首页"
       }
     },
@@ -13,17 +14,80 @@
       "style": {
         "navigationBarTitleText": "个人"
       }
+    },
+    {
+      "path": "pages/map/map",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "name": "chooseCity",
+      "path": "pages/chooseCity/chooseCity",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
     }
   ],
   "subPackages": [
     {
-      "root": "pages/test",
+      "root": "test",
       "pages": [
         {
           "name": "test",
-          "path": "test",
+          "path": "test/test",
           "style": {
             "navigationBarTitleText": "测试"
+          }
+        },
+        {
+          "name": "qrcode",
+          "path": "qrcode/qrcode",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "name": "confirmOrder",
+          "path": "confirmOrder/confirmOrder",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "name": "order",
+          "path": "order/order",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "name": "orderDetail",
+          "path": "orderDetail/orderDetail",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "name": "upload",
+          "path": "upload/upload",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "name": "uploadMore",
+          "path": "uploadMore/uploadMore",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
           }
         }
       ]
